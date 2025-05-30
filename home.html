@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Al-Hadi Motorcycles</title>
+    <!-- Linking Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Basic Layout */
+        header {
+            background-color: #1A1A1A;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #fca311;
+            color: #1A1A1A;
+            border-radius: 4px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Home Section */
+        #home {
+            background-color: #1A1A1A;
+            color: white;
+            padding: 80px 20px;
+        }
+        #home h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        #home p {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        #home .cta-btn {
+            background-color: #fca311;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #home .cta-btn:hover {
+            background-color: #e63946;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            color: #333;
+        }
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #777;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Motorcycles Section */
+        #types {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        #types h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .motorcycle-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .motorcycle-card {
+            background-color: #fff;
+            padding: 20px;
+            width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .motorcycle-card img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 180px;
+        }
+        .motorcycle-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+        .motorcycle-card p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .motorcycle-card button {
+            background-color: #fca311;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .motorcycle-card button:hover {
+            background-color: #e63946;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #333;
+            color: #fff;
+        }
+        #contact h2 {
+            font-size: 2.5rem;
+            color: #fca311;
+            margin-bottom: 20px;
+        }
+        #contact p {
+            font-size: 1.2rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+        #contact a {
+            color: #fca311;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        #contact a:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            color: #bbb;
+        }
+        footer a {
+            color: #fca311;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+            #home h2 {
+                font-size: 2.5rem;
+            }
+            .motorcycle-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .motorcycle-card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Al-Hadi Motorcycles</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#types">Motorcycles</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Al-Hadi Motorcycles</h2>
+        <p>Your journey starts here. Explore our premium selection of motorcycles designed for thrill, performance, and style.</p>
+        <button class="cta-btn">Browse Motorcycles</button>
+    </section>
+
+   <!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <!-- Image Added -->
+    <img src="https://surl.li/itgaxm" alt="Motorcycles" style="width: 100%; max-width: 800px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+    
+    <!-- Additional Information Added -->
+    <p>Al-Hadi Motorcycles was founded with the goal of delivering high-performance, reliable, and stylish motorcycles to riders who seek the thrill of the open road. Our team is committed to offering only the best in design, functionality, and customer service. Whether you’re a first-time rider or an experienced enthusiast, we are here to make your riding experience unforgettable.</p>
+
+    <!-- More Information -->
+    <p>At Al-Hadi, we believe in combining performance with aesthetics. Our motorcycles are carefully crafted to meet the needs of diverse riders, and we work tirelessly to bring the most innovative designs to the market. Every bike we offer is a result of extensive research and cutting-edge technology to ensure maximum safety, comfort, and power.</p>
+
+    <p>Whether you're looking for a speed monster for the racetrack or a cruiser to enjoy the open road, we have something for everyone. Our mission is simple: to provide you with the best motorcycles that match your personality and riding style. Join the Al-Hadi family and start your journey today!</p>
+</section>
+
+    <!-- Motorcycles Section -->
+    <section id="types">
+        <h2>Our Motorcycles</h2>
+        <div class="motorcycle-cards">
+            <div class="motorcycle-card">
+                <img src="https://surl.lt/jwjjql" alt="Kawasaki Ninja ZX-6R">
+                <h3>Kawasaki Ninja ZX-6R</h3>
+                <p>The ultimate sports bike. Built for speed, agility, and precision.</p>
+                <a href="https://www.kawasaki.com/motorcycle/ninja/ninja-zx-6r" target="_blank">
+                    <button>Learn More</button>
+                </a>
+            </div>
+            <div class="motorcycle-card">
+                <img src="https://surl.lu/ufylwd" alt="Harley Davidson Street Glide">
+                <h3>Harley Davidson Street Glide</h3>
+                <p>A comfortable cruiser with classic design and unmatched power.</p>
+                <a href="https://www.harley-davidson.com/us/en/motorcycles/street-glide.html" target="_blank">
+                    <button>Learn More</button>
+                </a>
+            </div>
+            <div class="motorcycle-card">
+                <img src="https://surl.li/yuahat" alt="Yamaha YZF-R1">
+                <h3>Yamaha YZF-R1</h3>
+                <p>Engineered for the racetrack. Fast, sleek, and built to win.</p>
+                <a href="https://yamaha-motor.com/parts/motorcycle" target="_blank">
+                    <button>Learn More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us. We'd love to hear from you!</p>
+        <a href="mailto:info@alhadimotorcycles.com">Email Us</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Al-Hadi Motorcycles. All Rights Reserved.</p>
+        <p><a href="#home">Back to top</a></p>
+    </footer>
+
+</body>
+</html>
